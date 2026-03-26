@@ -94,7 +94,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
 
     const field = (label, key, input) => (
         <div className="flex flex-col gap-1">
-            <label className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">
+            <label className="text-[10px] font-semibold uppercase tracking-wider text-black/60">
                 {label} <span className="text-red-400">*</span>
             </label>
             {input}
@@ -103,7 +103,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
     )
 
     const inputCls = (key) =>
-        `w-full border rounded-md px-3 py-2 text-sm outline-none transition-colors placeholder:text-gray-400 ${errors[key]
+        `w-full border rounded-md px-3 py-2 text-sm outline-none transition-colors placeholder:text-black/40 ${errors[key]
             ? 'border-red-300 focus:border-red-400'
             : 'border-gray-200 focus:border-blue/60 bg-gray-50 focus:bg-white'
         }`
@@ -126,7 +126,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                     <h2 className="text-sm font-semibold text-primary">Add application</h2>
                     <button
                         onClick={onClose}
-                        className="w-6 h-6 flex items-center justify-center rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+                        className="w-6 h-6 flex items-center justify-center rounded-md text-black/40 hover:text-black/60 hover:bg-gray-100 transition-colors"
                     >
                         <XMarkIcon className="w-4 h-4" />
                     </button>
@@ -136,7 +136,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                 <div className="overflow-y-auto px-5 py-4 flex flex-col gap-4">
                     {/* Stage */}
                     <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">
+                        <label className="text-[10px] font-semibold uppercase tracking-wider text-black/60">
                             Stage <span className="text-red-400">*</span>
                         </label>
                         <div className="flex flex-wrap gap-1.5">
@@ -147,7 +147,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                                     onClick={() => set('stage', s.id)}
                                     className={`text-xs px-3 cursor-pointer py-1.5 rounded-md border font-medium transition-colors ${form.stage === s.id
                                         ? 'bg-primary text-white border-primary'
-                                        : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+                                        : 'bg-white text-black/60 border-gray-200 hover:border-gray-400'
                                         }`}
                                 >
                                     {s.label}
@@ -201,14 +201,14 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
 
                     {/* URL */}
                     <div className="flex flex-col gap-1">
-                        <label className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">
+                        <label className="text-[10px] font-semibold uppercase tracking-wider text-black/60">
                             Job Posting URL
                         </label>
                         <input
                             value={form.url}
                             onChange={e => set('url', e.target.value)}
                             placeholder="https://..."
-                            className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm outline-none bg-gray-50 focus:bg-white focus:border-blue/60 transition-colors placeholder:text-gray-400"
+                            className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm outline-none bg-gray-50 focus:bg-white focus:border-blue/60 transition-colors placeholder:text-black/40"
                         />
                     </div>
 
@@ -225,13 +225,13 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
 
                     {/* Notes */}
                     <div className="flex flex-col gap-1">
-                        <label className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">Notes</label>
+                        <label className="text-[10px] font-semibold uppercase tracking-wider text-black/60">Notes</label>
                         <textarea
                             value={form.notes}
                             onChange={e => set('notes', e.target.value)}
                             placeholder="Referral contact, key requirements, interview tips..."
                             rows={3}
-                            className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm outline-none bg-gray-50 focus:bg-white focus:border-blue/60 transition-colors placeholder:text-gray-400 resize-none"
+                            className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm outline-none bg-gray-50 focus:bg-white focus:border-blue/60 transition-colors placeholder:text-black/40 resize-none"
                         />
                     </div>
                 </div>
@@ -240,7 +240,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                 <div className="flex items-center justify-end gap-2 px-5 py-3.5 border-t border-gray-100">
                     <button
                         onClick={onClose}
-                        className="text-sm cursor-pointer px-4 py-1.5 rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors font-medium"
+                        className="text-sm cursor-pointer px-4 py-1.5 rounded-md border border-gray-200 text-black/60 hover:bg-gray-50 transition-colors font-medium"
                     >
                         Cancel
                     </button>
