@@ -142,7 +142,7 @@ export default function JobDetailModal({ job, onClose, onArchive }) {
                     </div>
                     <button
                         onClick={onClose}
-                        className="w-6 h-6 flex items-center justify-center rounded-md text-black/40 hover:text-black/60 hover:bg-gray-100 transition-colors flex-shrink-0"
+                        className="w-6 h-6 flex items-center justify-center rounded-md text-black/40 cursor-pointer hover:text-black/60 hover:bg-gray-100 transition-colors flex-shrink-0"
                     >
                         <XMarkIcon className="w-4 h-4" />
                     </button>
@@ -200,7 +200,7 @@ export default function JobDetailModal({ job, onClose, onArchive }) {
                 <div className="flex items-center justify-end gap-2 px-5 py-3.5 border-t border-gray-100">
                     <button
                         onClick={() => { onArchive?.(job.id); onClose() }}
-                        className="text-sm px-4 py-1.5 rounded-md border border-gray-200 text-primary hover:bg-gray-50 transition-colors font-medium"
+                        className="text-sm px-4 py-1.5 rounded-md cursor-pointer border border-gray-200 text-primary hover:bg-gray-50 transition-colors font-medium"
                     >
                         Archive
                     </button>

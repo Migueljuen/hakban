@@ -5,6 +5,7 @@ import AddApplicationModal from './components/AddApplicationModal'
 import JobDetailModal from './components/JobDetailModal'
 // import { SAMPLE_JOBS } from './data/jobs'
 import './App.css'
+import Footer from './components/footer'
 
 const STORAGE_KEY = 'hakban_jobs'
 
@@ -48,27 +49,35 @@ export default function App() {
   }
 
   return (
-    <div className="h-full flex flex-col bg-secondary">
-      <Header onAddApplication={() => openAddModal()} />
-      <KanbanBoard
-        jobs={jobs}
-        onStar={handleStar}
-        onAdd={openAddModal}
-        onCardClick={setSelectedJob}
-        onMoveJob={handleMoveJob}
-      />
-      <AddApplicationModal
-        isOpen={addModal.open}
-        initialStage={addModal.stage}
-        onClose={closeAddModal}
-        onSave={handleAddJob}
-      />
-      <JobDetailModal
-        job={selectedJob}
-        onClose={() => setSelectedJob(null)}
-        onArchive={handleArchive}
-        onEdit={handleEditJob}
-      />
-    </div>
+    <>
+      <div className="h-full flex flex-col bg-secondary">
+        <Header onAddApplication={() => openAddModal()} />
+        <main className="flex-1 overflow-auto flex flex-col">
+          <KanbanBoard
+            jobs={jobs}
+            onStar={handleStar}
+            onAdd={openAddModal}
+            onCardClick={setSelectedJob}
+            onMoveJob={handleMoveJob}
+          />
+          <div className="mt-auto min-w-max">
+            <Footer />
+          </div>
+        </main>
+        <AddApplicationModal
+          isOpen={addModal.open}
+          initialStage={addModal.stage}
+          onClose={closeAddModal}
+          onSave={handleAddJob}
+        />
+        <JobDetailModal
+          job={selectedJob}
+          onClose={() => setSelectedJob(null)}
+          onArchive={handleArchive}
+          onEdit={handleEditJob}
+        />
+      </div>
+
+    </>
   )
 }

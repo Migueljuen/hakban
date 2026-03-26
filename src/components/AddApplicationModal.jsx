@@ -145,7 +145,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                                     key={s.id}
                                     type="button"
                                     onClick={() => set('stage', s.id)}
-                                    className={`text-xs px-3 py-1.5 rounded-md border font-medium transition-colors ${form.stage === s.id
+                                    className={`text-xs px-3 cursor-pointer py-1.5 rounded-md border font-medium transition-colors ${form.stage === s.id
                                         ? 'bg-primary text-white border-primary'
                                         : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
                                         }`}
@@ -219,6 +219,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                             value={form.date}
                             onChange={e => set('date', e.target.value)}
                             className={inputCls('date')}
+
                         />
                     )}
 
@@ -239,13 +240,13 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                 <div className="flex items-center justify-end gap-2 px-5 py-3.5 border-t border-gray-100">
                     <button
                         onClick={onClose}
-                        className="text-sm px-4 py-1.5 rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors font-medium"
+                        className="text-sm cursor-pointer px-4 py-1.5 rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors font-medium"
                     >
                         Cancel
                     </button>
                     <button
                         onClick={handleSave}
-                        className="text-sm px-4 py-1.5 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors font-medium"
+                        className="text-sm cursor-pointer px-4 py-1.5 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors font-medium"
                     >
                         Save application
                     </button>

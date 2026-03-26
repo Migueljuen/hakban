@@ -33,7 +33,7 @@ export default function KanbanBoard({ jobs, onStar, onAdd, onCardClick, onMoveJo
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
         >
-            <div className="px-6 flex gap-4 py-6 flex-1 overflow-auto">
+            <div className="px-6 flex gap-4 py-6 flex-1 min-w-max">
                 {COLUMNS.map(col => (
                     <KanbanColumn
                         key={col.id}

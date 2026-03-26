@@ -10,8 +10,8 @@ export default function Header({ onAddApplication }) {
                     <img className="w-24" src="/Logo.svg" alt="Hakban" />
                 </div>
                 <div className='flex gap-2'>
-                    <Button text="Filter" onClick={() => console.log('Filter')} />
-                    <Button text="Sort" onClick={() => console.log('Sort')} />
+                    {/* <Button text="Filter" onClick={() => console.log('Filter')} />
+                    <Button text="Sort" onClick={() => console.log('Sort')} /> */}
                     <Button text="Add application" onClick={onAddApplication} icon={<PlusIcon className='w-4 h-4' />} />
                 </div>
             </div>
