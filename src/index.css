@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+@theme {
+  --color-primary: #1D1D1D;
+  --color-secondary: #f3f3f3;
+  --color-blue: #378ADD;
+  --color-orange: #F59E0B;
+  --color-accent-01: #009905;
+  --color-accent-02: #00C295;
+  --color-gray-01: #0C0C0C;
+  --color-gray-02: #0F0F0F;
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'DM Mono', monospace;
+}
