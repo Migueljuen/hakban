@@ -82,8 +82,8 @@ export default function KanbanCard({ job, accent, isRejected, onStar, onClick })
                     {job.title}
                 </p>
                 <p
-                    className="text-xs mt-0.5"
-                    style={{ color: isRejected ? '#d1d5db' : '#00000060' }}
+                    className={`text-xs mt-0.5 ${isRejected ? 'text-black/40' : 'text-black/60'}`}
+
                 >
                     {job.company} · {job.location}
                 </p>

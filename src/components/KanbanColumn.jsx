@@ -16,7 +16,7 @@ export default function KanbanColumn({ column, jobs, onStar, onAdd, onCardClick 
                     style={{ background: column.accent }}
                     className="w-2 h-2 rounded-full flex-shrink-0"
                 />
-                <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 flex-1 truncate">
+                <span className="text-xs font-semibold uppercase tracking-wide text-black/60 flex-1 truncate">
                     {column.label}
                 </span>
                 <span className="text-xs text-black/40 font-secondary bg-gray-200 px-1.5 py-0.5 rounded-md font-medium">
@@ -48,7 +48,7 @@ export default function KanbanColumn({ column, jobs, onStar, onAdd, onCardClick 
                 ))}
                 {jobs.length === 0 && (
                     <div className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${isOver ? 'border-blue-300 bg-blue-50' : 'border-gray-200'}`}>
-                        <p className="text-xs text-gray-400">No applications yet</p>
+                        <p className="text-xs text-black/60">No applications yet</p>
                     </div>
                 )}
             </div>
