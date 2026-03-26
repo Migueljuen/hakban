@@ -7,6 +7,7 @@ import JobDetailModal from './components/JobDetailModal'
 import './App.css'
 import Footer from './components/footer'
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const STORAGE_KEY = 'hakban_jobs'
 
 function loadJobs() {
@@ -51,6 +52,7 @@ export default function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <div className="h-full flex flex-col bg-secondary">
         <Header onAddApplication={() => openAddModal()} />
         <main className="flex-1 overflow-auto flex flex-col">
