@@ -3,6 +3,7 @@ import Header from './components/header'
 import KanbanBoard from './components/list'
 import AddApplicationModal from './components/AddApplicationModal'
 import JobDetailModal from './components/JobDetailModal'
+import OnboardingModal from './components/OnboardingModal'
 // import { SAMPLE_JOBS } from './data/jobs'
 import './App.css'
 import Footer from './components/footer'
@@ -13,10 +14,10 @@ const STORAGE_KEY = 'hakban_jobs'
 function loadJobs() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
-    // return saved ? JSON.parse(saved) : SAMPLE_JOBS
+
     return saved ? JSON.parse(saved) : []
   } catch {
-    // return SAMPLE_JOBS
+
     return []
   }
 }
@@ -25,6 +26,9 @@ export default function App() {
   const [jobs, setJobs] = useState(loadJobs)
   const [addModal, setAddModal] = useState({ open: false, stage: 'wishlist' })
   const [selectedJob, setSelectedJob] = useState(null)
+  const [showOnboarding, setShowOnboarding] = useState(
+    () => !localStorage.getItem('hakban_onboarding_done')
+  )
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs))
@@ -78,6 +82,10 @@ export default function App() {
           onClose={() => setSelectedJob(null)}
           onArchive={handleArchive}
           onEdit={handleEditJob}
+        />
+        <OnboardingModal
+          isOpen={showOnboarding}
+          onComplete={() => setShowOnboarding(false)}
         />
       </div>
 

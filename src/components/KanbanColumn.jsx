@@ -16,7 +16,7 @@ export default function KanbanColumn({ column, jobs, onStar, onAdd, onCardClick 
                     style={{ background: column.accent }}
                     className="w-2 h-2 rounded-full flex-shrink-0"
                 />
-                <span className="text-xs font-semibold uppercase tracking-wide text-black/60 flex-1 truncate">
+                <span className="text-xs font-semibold uppercase tracking-wide text-black/80 flex-1 truncate">
                     {column.label}
                 </span>
                 <span className="text-xs text-black/40 font-secondary bg-gray-200 px-1.5 py-0.5 rounded-md font-medium">

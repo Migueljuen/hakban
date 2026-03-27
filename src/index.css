@@ -19,3 +19,54 @@ body,
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'DM Mono', monospace;
 }
+
+/* Onboarding checkmark animations */
+.ob-checkmark path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: ob-draw 0.6s 0.3s ease forwards;
+}
+
+.ob-pulse-ring {
+  animation: ob-pulse 2s ease-in-out infinite;
+}
+
+
+
+.ob-check-circle {
+  animation: ob-scale-in 0.4s ease forwards;
+}
+
+@keyframes ob-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ob-pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+
+
+@keyframes ob-scale-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
