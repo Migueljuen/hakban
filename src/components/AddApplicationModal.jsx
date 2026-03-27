@@ -191,7 +191,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                             <select
                                 value={form.workType}
                                 onChange={e => set('workType', e.target.value)}
-                                className={inputCls('workType') + ' cursor-pointer'}
+                                className={inputCls('workType') + ' cursor-pointer h-[38px]'}
                             >
                                 <option value="">Select...</option>
                                 {WORK_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
