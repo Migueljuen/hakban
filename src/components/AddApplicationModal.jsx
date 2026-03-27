@@ -157,7 +157,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                     </div>
 
                     {/* Company + Role */}
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {field('Company', 'company',
                             <input
                                 ref={firstInput}
@@ -178,7 +178,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                     </div>
 
                     {/* Location + Work Type */}
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {field('Location', 'location',
                             <input
                                 value={form.location}
