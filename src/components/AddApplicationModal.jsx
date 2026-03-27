@@ -218,7 +218,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
                             type="date"
                             value={form.date}
                             onChange={e => set('date', e.target.value)}
-                            className={inputCls('date')}
+                            className={inputCls('date') + ' appearance-none'}
 
                         />
                     )}
