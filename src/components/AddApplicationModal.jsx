@@ -111,6 +111,7 @@ export default function AddApplicationModal({ isOpen, initialStage, onClose, onS
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))', paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
             onClick={onClose}
         >
             {/* Backdrop */}
