@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className=' py-6  border-t border-gray-200'>
             <p className='text-center text-sm text-black/60'>
                 © 2026
-                <a href="https://juenmiguel.vercel.app/" target="_blank" className='text-primary hover:underline'> Miguel Juen</a>
+                <p className='text-primary'> Miguel J.</p>
                 . All rights reserved.
             </p>
         </footer>
